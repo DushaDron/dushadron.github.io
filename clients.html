@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клиенты — РемонтЦентр</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide иконки -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Общие стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#ffead1]">
+    <!-- Навигация -->
+    <nav class="bg-[#F3701E] shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="wrench" class="w-6 h-6 text-[#1b1b1b]"></i>
+                    <span class="font-bold text-[#1b1b1b] text-lg">РемонтЦентр</span>
+                </div>
+                
+                <div class="flex space-x-8">
+                    <a href="index.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#1b1b1b] hover:bg-[#1b1b1b] hover:text-[#f6f5ff] transition-colors">
+                        <i data-lucide="home" class="w-4 h-4"></i>
+                        Главная
+                    </a>
+                    <a href="orders.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#1b1b1b] hover:bg-[#1b1b1b] hover:text-[#f6f5ff] transition-colors">
+                        <i data-lucide="clipboard-list" class="w-4 h-4"></i>
+                        Заказы
+                    </a>
+                    <a href="clients.html" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#1b1b1b] text-[#f6f5ff] font-medium">
+                        <i data-lucide="users" class="w-4 h-4"></i>
+                        Клиенты
+                    </a>
+                    <a href="settings.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#1b1b1b] hover:bg-[#1b1b1b] hover:text-[#f6f5ff] transition-colors">
+                        <i data-lucide="settings" class="w-4 h-4"></i>
+                        Настройки
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Заголовок -->
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-bold text-[#1b1b1b]">Клиенты</h1>
+            <button class="bg-[#F3701E] text-[#1b1b1b] px-5 py-2.5 rounded-lg font-medium flex items-center gap-2 hover:bg-[#e05a0c] transition-colors shadow-md">
+                <i data-lucide="user-plus" class="w-4 h-4"></i>
+                Новый клиент
+            </button>
+        </div>
+
+        <!-- Поиск -->
+        <div class="bg-[#f6f5ff] rounded-xl p-4 mb-6 border border-[#F3701E]/20 flex gap-4 shadow-sm">
+            <div class="flex-1 relative">
+                <i data-lucide="search" class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-[#1b1b1b]/50"></i>
+                <input type="text" placeholder="Поиск клиентов по имени, телефону или email..." 
+                       class="w-full pl-10 pr-4 py-2.5 bg-[#ffead1] border border-[#F3701E]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F3701E] text-[#1b1b1b] placeholder-[#1b1b1b]/50">
+            </div>
+            <button class="px-4 py-2.5 bg-[#1b1b1b] text-[#f6f5ff] rounded-lg font-medium hover:bg-[#1b1b1b]/80 transition-colors flex items-center gap-2">
+                <i data-lucide="filter" class="w-4 h-4"></i>
+                Фильтр
+            </button>
+        </div>
+
+        <!-- Список клиентов -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Клиент 1 -->
+            <div class="bg-[#f6f5ff] rounded-xl border border-[#F3701E]/20 p-6 hover-scale shadow-md">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-[#F3701E]/20 flex items-center justify-center">
+                            <span class="text-[#F3701E] font-bold text-xl">ИП</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-[#1b1b1b]">Иван Петров</h3>
+                            <p class="text-sm text-[#1b1b1b]/60">Клиент с 2025</p>
+                        </div>
+                    </div>
+                    <span class="px-2 py-1 bg-[#F3701E]/15 text-[#F3701E] rounded-full text-xs font-medium">Постоянный</span>
+                </div>
+                
+                <div class="space-y-2 mb-4">
+                    <div class="flex items-center gap-2 text-sm">
+                        <i data-lucide="phone" class="w-4 h-4 text-[#F3701E]"></i>
+                        <span class="text-[#1b1b1b]">+7 (999) 123-45-67</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                        <i data-lucide="mail" class="w-4 h-4 text-[#F3701E]"></i>
+                        <span class="text-[#1b1b1b]">ivan.petrov@mail.ru</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                        <i data-lucide="clipboard-list" class="w-4 h-4 text-[#F3701E]"></i>
+                        <span class="text-[#1b1b1b]">3 заказа</span>
+                    </div>
+                </div>
+                

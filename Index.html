@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная — РемонтЦентр</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide иконки -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Общие стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#ffead1]">
+    <!-- Навигация (одинаковая на всех страницах) -->
+    <nav class="bg-[#F3701E] shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Логотип -->
+                <div class="flex items-center gap-2">
+                    <i data-lucide="wrench" class="w-6 h-6 text-[#1b1b1b]"></i>
+                    <span class="font-bold text-[#1b1b1b] text-lg">РемонтЦентр</span>
+                </div>
+                
+                <!-- Ссылки навигации -->
+                <div class="flex space-x-8">
+                    <a href="index.html" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#1b1b1b] text-[#e8d8c9] font-medium">
+                        <i data-lucide="home" class="w-4 h-4"></i>
+                        Главная
+                    </a>
+                    <a href="orders.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#1b1b1b] hover:bg-[#1b1b1b] hover:text-[#e8d8c9] transition-colors">
+                        <i data-lucide="clipboard-list" class="w-4 h-4"></i>
+                        Заказы
+                    </a>
+                    <a href="clients.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#1b1b1b] hover:bg-[#1b1b1b] hover:text-[#e8d8c9] transition-colors">
+                        <i data-lucide="users" class="w-4 h-4"></i>
+                        Клиенты
+                    </a>
+                    <a href="settings.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#1b1b1b] hover:bg-[#1b1b1b] hover:text-[#e8d8c9] transition-colors">
+                        <i data-lucide="settings" class="w-4 h-4"></i>
+                        Настройки
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Приветствие -->
+        <div class="bg-[#f6f5ff] rounded-2xl p-8 mb-8 border border-[#F3701E]/20 shadow-xl">
+            <h1 class="text-3xl font-bold text-[#1b1b1b] mb-4">Добро пожаловать в РемонтЦентр</h1>
+            <p class="text-[#1b1b1b]/70 text-lg">Управляйте заказами, клиентами и ремонтами в одном месте</p>
+        </div>
+
+        <!-- Статистика (кратко) -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="bg-[#f6f5ff] rounded-xl p-6 border border-[#F3701E]/20 hover-scale">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-[#1b1b1b] font-medium">Новые заказы</span>
+                    <div class="w-10 h-10 rounded-lg bg-[#F3701E]/15 flex items-center justify-center">
+                        <i data-lucide="alert-circle" class="w-5 h-5 text-[#F3701E]"></i>
+                    </div>
+                </div>
+                <div class="text-3xl font-bold text-[#1b1b1b]">8</div>
+            </div>
+            
+            <div class="bg-[#f6f5ff] rounded-xl p-6 border border-[#F3701E]/20 hover-scale">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-[#1b1b1b] font-medium">В работе</span>
+                    <div class="w-10 h-10 rounded-lg bg-[#F3701E]/15 flex items-center justify-center">
+                        <i data-lucide="wrench" class="w-5 h-5 text-[#F3701E]"></i>
+                    </div>
+                </div>
+                <div class="text-3xl font-bold text-[#1b1b1b]">12</div>
+            </div>
+            
+            <div class="bg-[#f6f5ff] rounded-xl p-6 border border-[#F3701E]/20 hover-scale">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-[#1b1b1b] font-medium">Готовы к выдаче</span>
+                    <div class="w-10 h-10 rounded-lg bg-[#F3701E]/15 flex items-center justify-center">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-[#F3701E]"></i>
+                    </div>
+                </div>
+                <div class="text-3xl font-bold text-[#1b1b1b]">5</div>
+            </div>
+            
+            <div class="bg-[#f6f5ff] rounded-xl p-6 border border-[#F3701E]/20 hover-scale">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-[#1b1b1b] font-medium">Клиентов</span>
+                    <div class="w-10 h-10 rounded-lg bg-[#F3701E]/15 flex items-center justify-center">
+                        <i data-lucide="users" class="w-5 h-5 text-[#F3701E]"></i>
+                    </div>
+                </div>
+                <div class="text-3xl font-bold text-[#1b1b1b]">34</div>
+            </div>
+        </div>
+
+        <!-- Быстрые действия -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="orders.html" class="bg-gradient-to-r from-[#f6f5ff] to-[#e05a0c] rounded-xl p-6 hover-scale block">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-[#1b1b1b]/20 rounded-lg flex items-center justify-center">
+                        <i data-lucide="clipboard-list" class="w-6 h-6 text-[#1b1b1b]"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-[#1b1b1b]">Управление заказами</h2>
+                        <p class="text-[#1b1b1b]/80">Просмотр и редактирование заказов</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="clients.html" class="bg-[#f6f5ff] rounded-xl p-6 border border-[#F3701E]/20 hover-scale block">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-[#F3701E]/15 rounded-lg flex items-center justify-center">
+                        <i data-lucide="user-plus" class="w-6 h-6 text-[#F3701E]"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-[#1b1b1b]">Добавить клиента</h2>
+                        <p class="text-[#1b1b1b]/70">Регистрация нового клиента</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Инициализация иконок -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
